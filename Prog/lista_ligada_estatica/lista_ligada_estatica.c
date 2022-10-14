@@ -120,6 +120,7 @@ bool excluirElemLista(LISTA * l, TIPOCHAVE ch){
 
 void reinicializarLista(LISTA* l ){
     inicializa(l);
+    printf("Lista reinicializada");
 }
 
 void devolverNo(LISTA * l, int j){
@@ -137,11 +138,7 @@ int main(){
 
 
     inicializa(&lista1);
-    // ELEMENTO* elem1 = (ELEMENTO*) malloc(sizeof(ELEMENTO));
-    // ELEMENTO* elem2 = (ELEMENTO*) malloc(sizeof(ELEMENTO));
-    // ELEMENTO* elem3 = (ELEMENTO*) malloc(sizeof(ELEMENTO));
-    // ELEMENTO* elem4 = (ELEMENTO*) malloc(sizeof(ELEMENTO));
-    // ELEMENTO* elem5 = (ELEMENTO*) malloc(sizeof(ELEMENTO));
+   
     REGISTRO reg1;
     reg1.chave = 2;
     REGISTRO reg2;
@@ -150,10 +147,7 @@ int main(){
     reg3.chave = 5;
     REGISTRO reg4;
     reg4.chave = 26;
-    // elem1->reg = reg1;
-    // elem2->reg = reg2;
-    // elem3->reg = reg3;
-    // elem4->reg = reg4;
+
 
     printf("%i", tamanho(&lista1));
     inserirElemento(&lista1,reg1);
@@ -163,7 +157,8 @@ int main(){
     exibirLista(&lista1);
     excluirElemLista(&lista1,5);
     exibirLista(&lista1);
-    
+    printf("O indice é %i\n", buscaSequencia(&lista1, 2));
+    reinicializarLista(&lista1);
 
 
     return 0;
